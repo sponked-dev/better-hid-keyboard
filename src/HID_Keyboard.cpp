@@ -177,15 +177,19 @@ void HID_Keyboard::releaseAll(void)
 	sendReport(&_keyReport);
 }
 
-size_t HID_Keyboard::write(uint8_t c)
+size_t HID_Keyboard::write(uint8_t c) {
+	return write(c, _delay)
+}
+
+size_t HID_Keyboard::write(uint8_t c, int delayMs)
 {
     if (!_running) {
         return 0;
     }
 	uint8_t p = press(c);  // Keydown
-	delay(10);
+	delay(delayMs);
 	release(c);            // Keyup
-	delay(10);
+	delay(delayMs);
 	return p;              // just return the result of press() since release() almost always returns 1
 }
 

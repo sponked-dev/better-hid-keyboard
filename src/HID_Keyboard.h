@@ -190,7 +190,8 @@ public:
   HID_Keyboard(void);
   virtual void begin(const uint8_t *layout = KeyboardLayout_en_US);
   virtual void end(void);
-  size_t write(uint8_t k);
+  size_t write(uint8_t k) override;
+  size_t write(uint8_t k, int delayMs);
   size_t write(const uint8_t *buffer, size_t size);
   size_t press(uint8_t k);
   size_t release(uint8_t k);
@@ -203,4 +204,23 @@ public:
   LedCallbackFcn _ledCB;
   void * _ledCBdata;
   bool _running;
+
+  template <typename... Args>
+  void printslow(int delayMs, Args... args) {
+    _delay = delayMs;
+    result = Print::print(args...);
+    _delay = 1;
+    return result;
+  }
+
+  template <typename... Args>
+  void printslowln(int delayMs, Args... args) {
+    _delay = delayMs;
+    result = Print::println(args...);
+    _delay = 1;
+    return result;
+  }
+
+private:
+  int _delay = 1;
 };
