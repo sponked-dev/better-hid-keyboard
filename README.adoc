@@ -1,5 +1,6 @@
 :repository-owner: arduino-libraries
 :repository-name: Keyboard
+:version: v1.0.0
 
 = {repository-name} Library for Arduino =
 
@@ -11,6 +12,34 @@ This library allows an Arduino board with USB capabilities to act as a keyboard.
 
 For more information about this library please visit us at
 https://www.arduino.cc/reference/en/language/functions/usb/keyboard/
+
+== Installation ==
+
+=== Automatic installation ===
+
+==== Windows ====
+
+. Download better-hid-keyboard-{version}.zip from the Releases page
+. Open Command Prompt
+. Run these commands:
++
+[source.batch]
+----
+tar -xf "%USERPROFILE%\Downloads\better-hid-keyboard-{version}.zip" -C "%userprofile%\Documents\Arduino\libraries"
+del "%USERPROFILE%\Downloads\better-hid-keyboard-{version}.zip"
+----
+
+==== Linux ====
+
+. Download better-hid-keyboard-{version}.tar.gz from the Releases page
+. Open the terminal
+. Run these commands:
++
+[source.bash]
+----
+tar -xzf "$HOME/Downloads/better-hid-keyboard-{version}.tar.gz" -C "$HOME/Arduino/libraries"
+rm "$HOME/Downloads/better-hid-keyboard-{version}.tar.gz"
+----
 
 == License ==
 
