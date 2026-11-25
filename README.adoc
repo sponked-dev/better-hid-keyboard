@@ -41,6 +41,13 @@ tar -xzf "$HOME/Downloads/better-hid-keyboard-{version}.tar.gz" -C "$HOME/Arduin
 rm "$HOME/Downloads/better-hid-keyboard-{version}.tar.gz"
 ----
 
+=== Manual installation ===
+
+. Download better-hid-keyboard-{version}.zip for Windows or .tar.gz for Linux
+. Extract the downloaded archive
+. Copy the extracted HID_Keyboard folder into C:\Users\<username>\Documents\Arduino\libraries for Windows or /home/<username>/Arduino/libraries for Linux
+. Delete the original archive and extracted folder
+
 == License ==
 
 Copyright (c) Arduino LLC. All right reserved.
