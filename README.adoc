@@ -23,7 +23,7 @@ https://www.arduino.cc/reference/en/language/functions/usb/keyboard/
 . Open Command Prompt
 . Run these commands:
 +
-[source.batch]
+[source,batch,subs="attributes+"]
 ----
 tar -xf "%USERPROFILE%\Downloads\better-hid-keyboard-{version}.zip" -C "%userprofile%\Documents\Arduino\libraries"
 del "%USERPROFILE%\Downloads\better-hid-keyboard-{version}.zip"
@@ -35,7 +35,7 @@ del "%USERPROFILE%\Downloads\better-hid-keyboard-{version}.zip"
 . Open the terminal
 . Run these commands:
 +
-[source.bash]
+[source,bash,subs="attributes+"]
 ----
 tar -xzf "$HOME/Downloads/better-hid-keyboard-{version}.tar.gz" -C "$HOME/Arduino/libraries"
 rm "$HOME/Downloads/better-hid-keyboard-{version}.tar.gz"
