@@ -206,17 +206,17 @@ public:
   bool _running;
 
   template <typename... Args>
-  void printslow(int delayMs, Args... args) {
+  size_t printslow(int delayMs, Args... args) {
     _delay = delayMs;
-    result = Print::print(args...);
+    size_t result = Print::print(args...);
     _delay = 1;
     return result;
   }
 
   template <typename... Args>
-  void printslowln(int delayMs, Args... args) {
+  size_t printslowln(int delayMs, Args... args) {
     _delay = delayMs;
-    result = Print::println(args...);
+    size_t result = Print::println(args...);
     _delay = 1;
     return result;
   }
