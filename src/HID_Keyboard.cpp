@@ -178,7 +178,7 @@ void HID_Keyboard::releaseAll(void)
 }
 
 size_t HID_Keyboard::write(uint8_t c) {
-	return write(c, _delay)
+	return write(c, _delay);
 }
 
 size_t HID_Keyboard::write(uint8_t c, int delayMs)
